@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <section>
+        <div id="login">
+            <div ><p>SIGNIN</p>
+                <button id="close">Close</button>
+
+            </div>
+             
+                 <table>
+                     <tr>
+                         <td>E-mail ID</td>
+                         <td><input type="text" class="boxlb" id="email"></td>
+                     </tr>
+                     <tr>
+                         <td>Password</td>
+                         <td><input type="text" class="boxlb" id="pass"></td>
+                     </tr>
+                 </table>
+            
+            <div id="inline">
+                <p>New User? Register</p>
+                <p>Forget Password</p>
+            </div>
+            <div id="loginbtn">
+                <button onclick="loginfun()">LOGIN</button>
+            
+            </div>
+            <br>
+            <div id="btnfg">
+                <button> <i class="fab fa-facebook-square"></i> Sign in with FaceBook</button>
+                <button> <i class="fab fa-google-plus"></i> Sign in with Google</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+<script>
+ var arr= JSON.parse(localStorage.getItem("detail")) ||[];
+
+ function loginfun(){
+  var log=document.querySelector("#email").value;
+  var pass=document.querySelector("#pass").value;
+  
+  if(arr.email==log && arr.password==pass){
+      alert("Login succesfully");
+      window.location.href="user.html";
+  }else{
+      alert("Wrong Credentials")
+  }
+   
+
+ }
+</script>
