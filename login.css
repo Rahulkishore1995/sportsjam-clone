@@ -1,0 +1,100 @@
+ .popout{
+    box-sizing: border-box;
+    width: 100%;
+    height: 2500px;
+    display: none;
+    justify-content: center;
+    
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top:0;
+    z-index: 1;
+    
+ }
+
+#login{
+   
+    top: 100px;
+    /* left: 500px; */
+  
+    width: 450px;
+    height: 360px;
+    /* margin-top: 50px; */
+    padding: 0px 20px;
+    background-color: #fff;
+    /* border-radius: 10px; */
+    position: relative;
+    margin: auto;
+    border: 4px solid  #999999;
+    margin: auto;
+    
+ }
+ 
+#login>div:nth-child(1){
+    display: flex;
+    margin-left: 180px;
+    justify-content: space-between;
+}
+ 
+#inline{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px;
+}
+#inline>p{
+    font-weight: lighter;
+    font-size: 15px;
+}
+/* #login>div{
+    margin: ;
+} */
+#close{
+  
+    font-size: 12px;
+     margin: 7px; 
+     
+}
+
+#loginbtn>button{
+    padding: 8px 150px;
+    margin-left: 20px;
+    background-color: #f49500;
+    border-radius: 5px;
+    border: 0px;
+    color: white;
+}
+table{
+    padding: 0px 10px;
+}
+tr>td:nth-child(1){
+    font-size: 15px;
+    font-weight: lighter;
+}
+.boxlb{
+    padding: 6px 65px;
+    border-radius: 5px;
+    border: 0.5px solid rgb(173, 170, 170);
+}
+ 
+#btnfg{
+    display: flex;
+   gap: 5px;
+    padding: 0px 20px;
+}
+#btnfg>button:nth-child(1){
+    background-color:  #3c579e;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    padding: 6px 15px;
+}
+#btnfg>button:nth-child(2){
+    background-color:  #e02f2f;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    padding: 6px 15px;
+}
+/* #btnlb>input:hover{
+    background-color: #e8f0fe;
+} */
