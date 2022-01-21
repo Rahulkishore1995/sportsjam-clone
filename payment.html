@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <section>
+        <div id="bodydiv">
+            <div id="tophead">
+                <img src="https://storage.sg.content-cdn.io/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/userimages/logo.jpg" alt="">
+            </div>
+            <hr>
+            <p>9964</p>
+            <hr style="width: 98%; margin: auto;">
+            <div id="mainupperdiv">
+                <div id="leftmainupperdiv">
+                    <div>Billing Information</div>
+                    <br>
+                    <input type="text" placeholder="Billing Name"class="left">
+                    <br>
+                    <br>
+                    <input type="text" name="" id="Address" placeholder="Address" class="left">
+                    <br>
+                    <br>
+                    <span><input type="text" name="" id="Zip" placeholder="Zip"><input type="text" id="city" placeholder="City"></span>
+                    <br>
+                    <br>
+                    <span><input type="text" name="" id="State" placeholder="lanmark"><select id="filter" onchange="">
+                        <option value="">State</option>
+                        <option value="">Andhra Pradesh</option>
+                        <option value="">Arunachal Pradesh</option>
+                        <option value="">Assam</option>
+                        <option value="">Bihar</option>
+                        <option value="">Chhattisgarh</option>
+                        <option value="">Goa</option>
+                        <option value="">Gujarat</option>
+                        <option value="">Haryana</option>
+                        <option value="">Himachal Pradesh</option>
+                        <option value="">Jharkhand</option>
+                        <option value="">Karnataka</option>
+                        <option value="">Kerala</option>
+                        <option value="">Madhya Pradesh</option>
+                        <option value="">Maharashtra</option>
+                        <option value="">Manipur</option>
+                        <option value="">Meghalaya</option>
+                        <option value="">Mizoram</option>
+                        <option value="">Nagaland</option>
+                        <option value="">Odisha</option>
+                        <option value="">Punjab</option>
+                        <option value="">Rajasthan</option>
+                        <option value="">Sikkim</option>
+                        <option value="">Tamil Nadu</option>
+                        <option value="">Telangana</option>
+                        <option value="">Tripura</option>
+                        <option value="">Uttar Pradesh</option>
+                        <option value="">Uttarakhand</option>
+                        <option value="">West Bengal</option>
+                      </select>
+                    </span>
+                    <br>
+                    <br>
+                    <span><input type="text" name="" id="MobileNumber" placeholder="Mobile Number"><input type="text" id="Email" placeholder="Email"></span>
+                    <br>
+                    <br>
+                    <input class="left"type="text" id="Note" placeholder="Notes(Optional)">
+                    <br>
+                    <br>
+                    <span  ><input type="checkbox"> My Billing and Shipping address are different</span>
+                     
+                </div>
+                <div id="rightmainupperdiv">
+                    <div id="rightmainupperdivtable">
+                        <h3>ORDER DETAILS</h3>
+                        <div class="order">
+                            <div>Order #:</div>
+                            <div>21808239</div>
+                        </div>
+                        <hr>
+                        <div class="order">
+                            <div>Order Amount</div>
+                            <div>2799.00</div>
+                        </div>
+                        <hr>
+                        <div class="order">
+                            <div>Total Amount</div>
+                            <div>INR 2799.00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="mainlowerdiv">
+                <div>Payment Information</div>
+                <div id="detail">
+                    <!-- <p>Card Number</p>
+                    <input type="text" value="Card Number*">
+                    <br>
+                    <p>Expiry Date</p>
+                    <input type="date" >
+                    <br>
+                    <p>CVV</p>
+                    <input type="text" value="CVV*"> -->
+                    <div>
+                        <div>Credit Card</div>
+                        <div>Debit Cards</div>
+                        <div>Net Banking</div>
+                        <div>Paytm</div>
+                        <div>Wallet</div>
+                        <div>UPI</div>
+                        <div>EMI Options</div>
+                        <div>Pay Later</div>
+                       
+                    </div>
+                    <div>
+                        Card Number
+                        <br>
+                         <input type="text" name="" id="">
+                       <span style="display: flex;gap: 12px;"> 
+                       
+                       <div>Expiry Date
+                           <br>
+                           <select name="" id="">
+                               <option value="">Month</option>
+                               <option value="">Jan(01)</option>
+                               <option value="">Feb(02)</option>
+                               <option value="">March(03)</option>
+                               <option value="">April(04)</option>
+                               <option value="">May(05)</option>
+                               <option value="">June(06)</option>
+                               <option value="">July(07)</option>
+                               <option value="">Aug(08)</option>
+                               <option value="">Sept(09)</option>
+                               <option value="">Oct(10)</option>
+                               <option value="">Nov(11)</option>
+                               <option value="">Dec(12)</option>
+                           </select>
+                       </div>
+                           <div>CVV
+                               <br>
+                               <input type="text" name="" id="">
+                           </div>
+                       </span>
+                        <p>
+                            I agree with the <b style="color: green;">Privacy Policy </b> by proceeding with this payment. <b style="color: green;">INR 2799.00</b>  (Total Amount Payable)</p>
+                       
+                       <div >
+                           <button onclick="paymentfunction()"   style="color: white;background-color: green;border: 0px;padding: 5px 8px;border-radius: 4px;">Make payment</button>
+                           <button    style="color: white;background-color: green;border: 0px;padding: 5px 8px;border-radius: 4px;">Cancel</button>
+                       </div> 
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="box3">
+         <div id="innerbox">
+            <div>
+                <img src="https://secure.ccavenue.com/images/CCAV.png" alt="" width="100%" height="100%">
+            </div>
+            <div>
+                <img src="https://www.rapidsslonline.com/blog/wp-content/uploads/2011/11/new-norton-seal1.png" alt="" width="100%" height="100%">
+            </div>
+            <div>
+                <img src="https://www.dailyexcelsior.com/wp-content/uploads/2021/09/pci-dss-compliant.png" alt=""  width="100%" height="100%">
+            </div>
+         </div>
+        </div>
+    </section>
+</body>
+</html>
+<script>
+    function paymentfunction(){
+        alert("Your Order is succesfully placed");
+        window.location.href="user.html"
+    }
+</script>
