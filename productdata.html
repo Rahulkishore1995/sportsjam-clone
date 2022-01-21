@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #product_div{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 40px;
+            margin: auto;
+
+        }
+        #product_div>div:hover{
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;;
+        }
+        #product_div>div>h5{
+            padding: 5%;
+            margin: 0px;
+        }
+        #product_div>div>img{
+            padding-left: 15%;
+            /* background-color: greenyellow; */
+        }
+        #flex{
+            display: flex;
+            justify-content: space-between;
+            padding: 5%;
+            /* margin-bottom: 10px; */
+        }
+        #flex>p{
+            margin: 0px;
+        }
+        #img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div id="product_div">
+            
+        </div>
+    </section>
+</body>
+</html>
+<script>
+    
+    var allProductData = [{
+    imgURL: "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/AS1071A054008.jpg",
+    price: "8999.00",
+    name: "Asics Gel-Rocket 10 Mens Indoor Court Shoes (Black/Electric Red)",
+    type: "Men lifestyle",
+    gender: "Male"
+},
+{
+    imgURL: "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/AS1071A053002.jpg",
+    price: "2519.50",
+    name: "Asics Upcourt 4 Mens Indoor Court Shoes (Black/White)",
+    type: "Men Training",
+    gender: "Male"
+},
+{
+    imgURL: "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/AS1072A055001.jpg",
+    price: "1900.00",
+    name: "Asics Upcourt 4 Womens Indoor Court Shoes (Black/White)",
+    type: "Men Running",
+    gender: "Male"
+},
+{
+    imgURL: "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/AS1072A055101.jpg",
+    price: "2499.00",
+    name: "Asics Upcourt 4 Womens Indoor Court Shoes (White/Aquarium)",
+    type: "Men Lifestyle",
+    gender: "Male"
+},
+{
+    imgURL: "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/AS1071A030020.jpg",
+    price: "999.00",
+    name: "Asics Gel-Rocket 9 Mens Indoor Court Shoes (Glacier Grey/Mako Blue)",
+    type: "Men Lifestyle",
+    gender: "Male"
+},
+{
+    imgURL: "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/AS1072A034701.jpg",
+    price: "3599.00",
+    name: "Asics Gel-Rocket 9 Womens Indoor Court Shoes (Guava/Midnight)",
+    type: "Men originals",
+    gender: "Male"
+},
+{
+    imgURL: "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/AS1071A030001.jpg",
+    price: "9999.00",
+    name: "Asics Gel-Rocket 9 Mens Indoor Court Shoes (Black/White)",
+    type: "Men originals",
+    gender: "Male"
+},
+{
+    imgURL: "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/AS1072A034103.jpg",
+    price: "4199.50",
+    name: "Asics Gel-Rocket 9 Womens Indoor Court Shoes (White/Vapor)",
+    type: "Men originals",
+    gender: "Female"
+},
+{
+    imgURL: "https://assets.adidas.com/images/w_276,h_276,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/b741078521f54799b401ad7100f9c9be_9366/Adicolor_Classics_Corded_Velour_Loose_Tee_Black_H37841_21_model.jpg",
+    price: "2999.00",
+    name: "Adicolor Classics Corded Velour Loose Tee",
+    type: "Women originals",
+    gender: "Female"
+},
+{
+    imgURL: "https://assets.adidas.com/images/w_276,h_276,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/29e90e0a297d4a35b67ead6b00dc3284_9366/Adicolor_Classics_Chunky_Velour_Pants_Orange_H37838_21_model.jpg",
+    price: "4999.00",
+    name: "Adicolor Classics Chunky Velour Pants",
+    type: "Women Lifestyle",
+    gender: "Female"
+},
+{
+    imgURL: "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YNWTS999NBL.jpg",
+    price: "12999.00",
+    name: "Yonex Womens Round Neck T-Shirt (Nautical Blue-999)",
+    type: "Women Lifestyle",
+    gender: "Female"
+},
+{
+    imgURL: "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YNWTS20282CBZ.jpg",
+    price: "11999.00",
+    name: "Yonex Womens Round Neck T-Shirt (Capri Breez-20282)",
+    type: "Women originals",
+    gender: "Female"
+},
+{
+    imgURL: "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/MZJ2GA420622.JPG",
+    price: "2799.00",
+    name: "Mizuno Drylite Inspire Melange Womens T-Shirts (Dazzling Blue)",
+    type: "Women originals",
+    gender: "Female"
+},
+{
+    imgURL: "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/MZJ2GA420637.JPG",
+    price: "5999.00",
+    name: "Mizuno Drylite Core Womens T-Shirts (Black)",
+    type: "Women Lifestyle",
+    gender: "Female"
+},
+{
+    imgURL: "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YNWTS999TM.jpg",
+    price: "2299.00",
+    name: "Yonex Womens Round Neck T-Shirt (Tomato- 999)",
+    type: "Performance",
+    gender: "Female"
+},
+{
+    imgURL: "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YNWTS999FPK.jpg",
+    price: "3599.00",
+    name: "Yonex Womens Round Neck T-Shirt (Flamingo Pink-999)",
+    type: "Originals",
+    gender: "Female"
+},
+{
+    imgURL: "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YNMTS20282RD.jpg",
+    price: "1399.50",
+    name: "Yonex Womens Round Neck T-Shirt (Red - 20282)",
+    type: "Sportswear",
+    gender: "Female"
+},
+{
+    imgURL: "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YNJRTS896BK.jpg",
+    price: "4000.00",
+    name: "Yonex Junior Polo T-Shirt (Black - 896)",
+    type: "Kids Lifestyle",
+    gender: "kids"
+},
+{
+    imgURL: "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YNJRTS10152DBL.jpg",
+    price: "599.00",
+    name: "Yonex Junior Polo T-Shirt (Deep Blue - 10152",
+    type: "Sportswear",
+    gender: "kids"
+},
+{
+    imgURL: "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YNJRTS20288YL.jpg",
+    price: "1400.00",
+    name: "Yonex Junior Round Neck T-Shirt (Yellow - 20288)",
+    type: "Performance",
+    gender: "kids"
+},
+{
+    imgURL: "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/NK532808-413.jpg",
+    price: "2099.50",
+    name: "Nike FC Barcelona Home Jersey 2013/14 (Boys - Junior)",
+    type: "Performance",
+    gender: "kids"
+},
+{
+    imgURL: "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YNJRTS20315BL.jpg",
+    price: "1099.50",
+    name: "Yonex Junior V Neck T-Shirt (Mazarine Blue - 20315)",
+    type: "Performance",
+    gender: "kids"
+},
+{
+    imgURL: "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/STAPMSHTW4L1.jpg",
+    price: "699.00",
+    name: "Stag Twist Junior Shorts (Navy / White)",
+    type: "Kids shorts",
+    gender: "kids"
+},
+{
+    imgURL: "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YNJRTS857BRD.jpg",
+    price: "999.00",
+    name: "Yonex Junior Girls Shorts (Bright Red - 857)",
+    type: "Kids shorts",
+    gender: "kids"
+},
+{
+    imgURL: "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YNJRTS857HC.jpg",
+    price: "999.00",
+    name: "Yonex Junior Girls Shorts (Bright pink - 857)",
+    type: "Kids shorts",
+    gender: "kids"
+},
+{
+    imgURL: "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/NK832901-425.jpg",
+    price: "1999.00",
+    name: "Nike Junior Dry Academy Football Shorts (Black/White)",
+    type: "Kids shorts",
+    gender: "kids"
+},
+{
+    imgURL: "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YNJRTS857BRL.jpg",
+    price: "999.00",
+    name: "Yonex Junior Girls Skorts (Bright Lime - 857)",
+    type: "Kids shorts",
+    gender: "kids"
+},
+{
+    imgURL: "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YNAPWC8617SGL.jpg",
+    price: "999.00",
+    name: "Yonex Junior Capri (Grey)",
+    type: "Kids  Capri",
+    gender: "kids"
+},
+];
+
+
+// javascript work
+
+
+ var product_div=document.getElementById("product_div");
+ allProductData.forEach(element => {
+     var img=document.createElement("img");
+     img.setAttribute("id","img")
+     img.style.width="200px";
+     img.style.height="250px";
+     img.src=element.imgURL;
+     var h5=document.createElement("h5");
+     h5.innerText=element.name;
+     var p1=document.createElement("p");
+     p1.innerText="₹ "+element.price;
+     var p2=document.createElement("p");
+     p2.innerText=element.type;
+     
+    var div1 = document.createElement("div");
+    div1.setAttribute("id", "flex");
+
+    div1.append(p1,p2)
+   var div2=document.createElement("div");
+   div2.append(img,h5,div1)
+     product_div.append(div2);
+    
+
+
+
+ }); 
+
+
+
+
+</script>
