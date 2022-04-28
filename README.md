@@ -3,7 +3,7 @@ Cloning the bestbuy website for the construct week project. SPORTSJAM, a place w
 # Sportsjam
 
 
-![Sportsjam](https://miro.medium.com/max/700/1*4El8UMAl0ISfIgCbNU3OSw.png)
+![Sportsjam](https://miro.medium.com/max/700/1*HUYIjW3lQFaj9bAXTXZ49A.png)
 
 
 # Welcome :wave:
@@ -17,7 +17,7 @@ git clone https://github.com/Rahulkishore1995/sportsjam-clone
 
 
 ## Deployment Link:-
-[Sportsjam-clone001.netlify.app](https://merry-kitten-8e2680.netlify.app)
+[Sportsjam-clone001.netlify.app](https://sportsjam-project-rahulkishore1995.vercel.app/)
 
 ## Contributers :- 
 - Solo Project
