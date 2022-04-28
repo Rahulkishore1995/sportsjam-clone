@@ -1,4 +1,4 @@
-# sportsjam-clone
+# Sportsjam-Clone
 Cloning the bestbuy website for the construct week project. SPORTSJAM, a place where you can buy all the top brand product related to sports, like sports cloth, shoe, sports apparel, footwear, sports equipment(such as tennis, racket, Shuttle Cock, Badminton..) and many more things.
 # Sportsjam
 
